@@ -2,6 +2,15 @@
 
 
 def magic_calculation(a, b):
+    """My addition function
+
+    Args:
+        a: first integer
+        b: second integer
+
+    Returns:
+        The return value. c
+    """
     from magic_calculation_102 import add, sub
     if a < b:
         c = add(a, b)
