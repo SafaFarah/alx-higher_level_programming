@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 def no_c(my_string):
     if my_string is not None:
-        new_string = ''
-        for i in range(len(my_string)):
-            if my_string[i] not in 'cC':
-                new_string = new_string + my_string[i]
+        s_list = list(my_string)
+        new_list =[]
+        for ch in s_list:
+            if ch != 'c' and ch != 'C':
+                new_list.append(ch)
+        new_string = "".join(new_list)
     return new_string
