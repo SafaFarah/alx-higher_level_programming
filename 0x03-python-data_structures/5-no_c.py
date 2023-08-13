@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 def no_c(my_string):
-    s_list = list(my_string)
-    for ch in s_list:
-        if ch == 'c' or ch == 'C':
-            s_list.remove(ch)
-    return("".join(s_list))
+    new_string = ''
+    for i in range(len(my_string)):
+        if my_string[i] != 'C' and my_string[i] != 'c':
+            new_string = new_string + my_string[i]
+    return new_string
