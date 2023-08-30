@@ -105,6 +105,4 @@ class Square:
                 print("#", end="")
             if i != self.__size - 1:
                 print()
-        if self.__size == 0:
-            print()
         return("")
