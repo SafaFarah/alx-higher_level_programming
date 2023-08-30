@@ -94,9 +94,10 @@ class Square:
 
     def __str__(self):
         """Define the my_print() of  a Square."""
-        if self.__position[1] > 0:
-            for x in range(self.__position[1]):
-                print()
+        if self.size != 0:
+            if self.__position[1] > 0:
+                for x in range(self.__position[1]):
+                    print()
         for i in range(self.__size):
             for p in range(self.__position[0]):
                 print(" ", end="")
@@ -104,6 +105,6 @@ class Square:
                 print("#", end="")
             if i != self.__size - 1:
                 print()
-            if self.__size == 0:
-                print()
+        if self.__size == 0:
+            print()
         return("")
