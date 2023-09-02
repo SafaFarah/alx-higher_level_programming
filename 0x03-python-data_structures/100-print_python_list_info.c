@@ -1,4 +1,4 @@
-#include <python3.4/python.h>
+#include <Python.h>
 
 /**
  * print_python_list_info -  print information about pyobject.
