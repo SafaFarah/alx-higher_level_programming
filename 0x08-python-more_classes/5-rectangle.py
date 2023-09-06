@@ -105,9 +105,8 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
         def __del__(self):
-
+            """
+            A function delets an instance of Rectangle.
+            Return: Bye rectangle... when an instance is deleted
         """
-        A function delets an instance of Rectangle.
-        Return: Bye rectangle... when an instance is deleted
-        """
-        return ("{:s}".format("Bye rectangle... ")
+            return ("{:s}".format("Bye rectangle... "))
