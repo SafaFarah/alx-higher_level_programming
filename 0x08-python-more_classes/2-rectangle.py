@@ -42,7 +42,6 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-            self.__position = position
 
     @property
     def height(self):
@@ -79,7 +78,7 @@ class Rectangle:
         Public instance method  returns the current rectangle  perimeter.
         Returns: The current rectangle  perimeter.
         """
-        if (width == 0  or height == 0)
+        if (self.__width == 0 or self.__height == 0):
             return 0
-        else
+        else:
             return 2 * (self.__width + self.__height)
