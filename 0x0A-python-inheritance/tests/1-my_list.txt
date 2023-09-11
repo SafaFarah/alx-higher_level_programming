@@ -1,0 +1,3 @@
+import class from module:
+-------------------------
+>>> MyList = __import__('1-my_list').MyList
