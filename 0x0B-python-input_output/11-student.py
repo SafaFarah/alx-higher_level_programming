@@ -38,7 +38,6 @@ q            first_name: first name of student.
                 pass
         return _dict
 
-
     def reload_from_json(self, json):
         """ Public method replaces all
         attributes of the Student instance.
