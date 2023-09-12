@@ -12,7 +12,7 @@ class Student:
     def __init__(self, first_name, last_name, age):
         """Creates new object of Student.
         Args:
-            first_name: first name of student.
+q            first_name: first name of student.
             last_name: last name of student.
             age: age of student.
         """
@@ -39,8 +39,7 @@ class Student:
         return _dict
 
 
-
-    def reload_from_5json(self, json):
+    def reload_from_json(self, json):
         """ Public method replaces all
         attributes of the Student instance.
 
