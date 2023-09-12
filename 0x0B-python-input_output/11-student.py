@@ -37,8 +37,10 @@ class Student:
             except Exception:
                 pass
         return _dict
-        
-    def reload_from_json(self, json):
+
+
+
+    def reload_from_5json(self, json):
         """ Public method replaces all
         attributes of the Student instance.
 
