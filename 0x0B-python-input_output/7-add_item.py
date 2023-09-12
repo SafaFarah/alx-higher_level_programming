@@ -13,7 +13,8 @@ args_list = sys.argv
 filename = "add_item.json"
 try:
     _list = load_from_json_file(filename)
-except:
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
     _list = []
 _list.extend(args_list[1:])
 save_to_json_file(_list, filename)
