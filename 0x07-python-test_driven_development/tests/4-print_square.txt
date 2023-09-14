@@ -1,0 +1,17 @@
+Correct output - case: 0
+
+Correct output - case: -2 => ValueError: size must be >= 0
+
+Correct output - case: "3" => TypeError: size must be an integer
+
+Correct output - case: 4
+
+Test present: size= integer and > 0
+
+Test present: size= not integer => TypeError: size must be an integer
+
+Test present: size= integer < 0 => ValueError: size must be >= 0
+
+Test present: missing one argument
+
+

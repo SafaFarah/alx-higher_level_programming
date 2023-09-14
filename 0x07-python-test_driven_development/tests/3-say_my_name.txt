@@ -1,0 +1,16 @@
+Correct output - case: "Bob" / "Lenon"
+
+
+Correct output - case: "Bob"
+
+Correct output - case: "Bob" / 12
+
+Correct output - case: 12 / "Lenon"
+
+Test present: firstname= string / lastname= string
+
+Test present: firstname= string / lastname= not string => TypeError: last_name must be a string
+
+Test present: firstname= not string / lastname= string => TypeError: first_name must be a string
+
+Test present: missing two arguments

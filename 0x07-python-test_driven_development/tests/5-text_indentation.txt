@@ -1,0 +1,16 @@
+Correct output - case: "Holberton School"
+
+Correct output - case: "Holberton.School"
+
+
+Correct output - case: "Holberton. School? How are you: John"
+
+Correct output - case: 12 => TypeError: text must be a string
+
+Test present: text= string
+
+Test present: text= not string => TypeError: text must be a string
+
+Test present: text= string with blank line
+
+Test present: missing one argument
