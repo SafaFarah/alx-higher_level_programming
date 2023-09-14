@@ -36,7 +36,7 @@ def matrix_divided(matrix, div):
             raise TypeError('Each row of the matrix must have the same size')
         for num in row:
             if type(num) != int and type(num) != float:
-                raise TypeError(Erorr)
+                raise TypeError(Error)
             divrow.append(round(num / div, 2))
         divmatrix.append(divrow)
     return divmatrix
