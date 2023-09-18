@@ -5,6 +5,7 @@ This class will be the base of all other classes in this project
 """
 import json
 import os
+import csv
 
 
 class Base:
@@ -17,7 +18,7 @@ class Base:
         """
         Method creates anew object of class.
         Args:
-            id:......
+            id: The identifier of an object.
         """
         if id is not None:
             self.id = id
@@ -104,3 +105,47 @@ class Base:
             obj = cls.create(**dic)
             list_obj.append(obj)
         return list_obj
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Class method that serializes in CSV:
+        Args:
+            A list of instances who inherits
+            of Base.
+        """
+        filename = "{}.csv".format(cls.__name__)
+        dic_list = []
+        if list_objs is None:
+            pass
+        else:
+            with open(filename, 'w', newline="") as f:
+                if cls.__name__ == "Rectangle":
+                    for o in list_objs:
+                        csv.writer(f).writerow([o.id,
+                                               o.width, o.height, o.x, o.y])
+                elif cls.__name__ == "Square":
+                    for o in list_objs:
+                        csv.writer(f).writerow([o.id, o.size, o.x, o.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Class method that deserializes in CSV
+        """
+        filename = cls.__name__ + ".csv"
+        obj_list = []
+        try:
+            with open(filename, 'r') as f:
+                reader = csv.reader(f)
+                for L in reader:
+                    if cls.__name__ == "Rectangle":
+                        dic = {"id": int(L[0]), "width": int(L[1]),
+                               "height": int(L[2]), "x": int(L[3]),
+                               "y": int(L[4])}
+                    elif cls.__name__ == "Square":
+                        dic = {"id": int(L[0]), "size": int(L[1]),
+                               "x": int(L[2]), "y": int(L[3])}
+                    obj = cls.create(**dic)
+                    obj_list.append(obj)
+        except(Exception):
+            pass
+        return(obj_list)
