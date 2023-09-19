@@ -57,7 +57,7 @@ class Base:
         else:
             for obj in list_objs:
                 dic_list.append(obj.to_dictionary())
-            string = cls.to_json_string(dic_list)
+        string = cls.to_json_string(dic_list)
         with open(filename, "w", encoding="utf-8") as f:
             f.write(string)
 
