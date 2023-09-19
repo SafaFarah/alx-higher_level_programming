@@ -83,7 +83,7 @@ class Square(Rectangle):
         """
         dict_squ = {}
         dict_squ["id"] = self.id
-        dict_squ["size"] = self.__size
+        dict_squ["size"] = self.width
         dict_squ["x"] = self.x
         dict_squ["y"] = self.y
         return dict_squ
