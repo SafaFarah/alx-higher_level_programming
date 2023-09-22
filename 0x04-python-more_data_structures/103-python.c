@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <Python.h>
 
+void print_python_bytes(PyObject *p);
 /**
  * print_python_list -  print information about pyobject.
  * @p:  pyobject
@@ -22,7 +23,7 @@ void print_python_list(PyObject *p)
 	{
 		printf("Element %d: %s\n", n, pylist->ob_item[n]->ob_type->tp_name);
 		if (PyBytes_Check(pylist->ob_item[n]))
-			print_python_bytes(pylist->ob_item[n])
+			print_python_bytes(pylist->ob_item[n]);
 	}
 }
 
