@@ -61,6 +61,6 @@ void print_python_bytes(PyObject *p)
 			printf(" %02x", string[i]);
 		else
 			printf(" %02x", 256 + string[i]);
-		printf("\n");
 	}
+	printf("\n");
 }
