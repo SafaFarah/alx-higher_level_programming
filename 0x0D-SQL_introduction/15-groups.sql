@@ -1,9 +1,4 @@
--- a script that lists the number of records with the same score in table second_table.
--- The result should display:
--- the score
--- the number of records for this score with the label number
---The list should be sorted by the number of records (descending)
-
+-- script that lists the number of records with the same score in table second_table.
 SELECT score, COUNT(*) AS number
 FROM second_table
 GROUP BY score
