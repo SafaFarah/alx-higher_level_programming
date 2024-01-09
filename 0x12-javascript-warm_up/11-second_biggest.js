@@ -8,12 +8,15 @@ if (args.length < 4) {
   for (let i = 2; i < args.length; i++) {
     arr.push(parseInt(args[i]));
   }
-  arr.sort();
-  arr.reverse();
+  let largest = arr[0];
+  let largest2 = -Infinity;
   for (let j = 1; j < arr.length; j++) {
-    if (arr[j] !== arr[0]) {
-      console.log(arr[j]);
-      break;
+    if (arr[j] > largest) {
+      largest2 = largest;
+      largest = arr[j];
+    } else if (arr[j] < largest && arr[j] > largest2) {
+      largest2 = arr[j];
     }
   }
+  console.log(largest2);
 }
