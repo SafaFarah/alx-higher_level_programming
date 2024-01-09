@@ -1,3 +1,4 @@
 Python programming projects
 C programming projects
-scripts
+Javascripts
+SQL
