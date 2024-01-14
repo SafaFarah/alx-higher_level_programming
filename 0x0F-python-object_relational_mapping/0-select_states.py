@@ -10,7 +10,7 @@ if __name__ == " __main__":
                          password=argv[2], database=argv[3], port=3306,
                          charset="utf8")
     cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
     row = cur.fetchall()
     for i in row:
         print(i)
