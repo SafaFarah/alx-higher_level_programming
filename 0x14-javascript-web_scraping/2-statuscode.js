@@ -4,5 +4,5 @@ const request = require('request');
 request(arg[2], (error, response, body) => {
   if (error) {
     console.log(error);
-  } else { console.log('code: ', response.statusCode); }
+  } else { console.log('code:', response.statusCode); }
 });
