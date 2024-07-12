@@ -5,7 +5,7 @@ Import the function:
 Now test it:
 
     >>> say_my_name("Safa", "Ali")
-    My name is John Smith
+    My name is Safa Ali
 
     >>> say_my_name("Bob")
     My name is Bob
@@ -23,7 +23,7 @@ Now test it:
     TypeError: first_name must be a string
 
     >>> say_my_name("", "Ali")
-    My name is  Holberton
+    My name is  Ali
 
     >>> say_my_name("", "")
     My name is
