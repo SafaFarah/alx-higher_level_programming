@@ -1,17 +1,16 @@
-All unittest passed
+import unittest
+from 6-max_integer import max_integer
 
-Test for "max at the end"  exists
+class TestMaxInteger(unittest.TestCase):
 
-Test for "max at the beginning" exists
+    def test_positive_integers(self):
+        self.assertEqual(max_integer([1, 4, 3, 2]), 4)
 
-Test for "max in the middle" exists
+    def test_negative_integers(self):
+        self.assertEqual(max_integer([-1, -2, -3, -4]), -1)
 
-Test for "one negative number in the list" exists
+    def test_empty_list(self):
+        self.assertEqual(max_integer([]), None)
 
-Test for "only negative numbers in the list" exists
-
-Test for "list of one element" exists
-
-Test for "list is empty" exists
-
-
+if __name__ == '__main__':
+    unittest.main()
